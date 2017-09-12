@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="45dp"
+        android:orientation="vertical">
+
+
+
+
+        <LinearLayout
+            android:id="@+id/pay_step_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            android:gravity="center|left"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/pay_reset_btn"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/big_btn_backgroud"
+                android:text="重置密码"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/pay_step2_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/layer_list"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom|left"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/password_icon" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/pay_password_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:drawableLeft="@color/transparent"
+                        android:gravity="center|left"
+                        android:hint="请输入登录密码"
+                        android:inputType="textPassword"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textColorHint="@color/shangtongtianx_check_txt" />
+
+                    <CheckBox
+                        android:id="@+id/pay_pw1_show_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center|right"
+                        android:layout_gravity="center|right"
+                        android:button="@drawable/checkbox_pw_visible"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/layer_list"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom|left"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/password_icon" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/pay_password2_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:drawableLeft="@color/transparent"
+                        android:gravity="center|left"
+                        android:hint="请输入支付密码"
+                        android:maxLength="6"
+                        android:inputType="numberPassword"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textColorHint="@color/shangtongtianx_check_txt" />
+
+                    <CheckBox
+                        android:id="@+id/pay_pw2_show_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center|right"
+                        android:layout_gravity="center|right"
+                        android:button="@drawable/checkbox_pw_visible"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/pay_step1_btn"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/big_btn_backgroud"
+                android:text="确定"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+    <include
+        android:id="@+id/pay_header"
+        layout="@layout/header_lay"
+        android:visibility="visible" />
+</RelativeLayout>

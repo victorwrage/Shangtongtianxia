@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/shangtongtianx_btn_text" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/shangtongtianx_edit_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="新增地址"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/shut_btn_lay"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/big_btn_backgroud_blue"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/shut_icon" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/address_name_lay"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/address_name_tv"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center|left"
+                android:text="收件人"
+                android:textColor="@color/shangtongtianx_btn_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/address_name_et"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/address_name_tv"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
+                android:imeOptions="flagNavigateNext"
+                android:hint="请输入姓名"
+                android:singleLine="true"
+                android:background="@color/white"
+                android:textColor="@color/shangtongtianx_check_txt"
+                android:textSize="16sp" />
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/shangtongtianx_sep" />
+
+        <RelativeLayout
+            android:id="@+id/address_phone_lay"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/address_phone_tv"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center|left"
+                android:text="联系电话"
+                android:textColor="@color/shangtongtianx_btn_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/address_phone_et"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/address_phone_tv"
+                android:layout_marginRight="10dp"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_marginLeft="5dp"
+                android:hint="请输入您的手机号"
+                android:background="@color/white"
+                android:textColor="@color/shangtongtianx_check_txt"
+                android:textSize="16sp" />
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/shangtongtianx_sep" />
+        <RelativeLayout
+            android:id="@+id/address_location_lay"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/address_location_tv"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center|left"
+                android:text="所在地区"
+                android:textColor="@color/shangtongtianx_btn_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/address_location_tv_show"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/address_location_tv"
+                android:gravity="center|left"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
+
+                android:background="@color/white"
+                android:textColor="@color/shangtongtianx_check_txt"
+                android:textSize="16sp" />
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/shangtongtianx_sep" />
+
+        <RelativeLayout
+            android:id="@+id/address_detail_lay"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/address_detail_tv"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center|left"
+                android:text="详细住址"
+                android:textColor="@color/shangtongtianx_btn_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/address_detail_et"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/address_detail_tv"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
+                android:hint="请填写详细地址"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:background="@color/white"
+                android:textColor="@color/shangtongtianx_check_txt"
+                android:textSize="16sp" />
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/shangtongtianx_sep" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/address_save_lay"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/big_btn_backgroud"
+        android:text="保存地址"
+        android:textColor="@color/white" />
+
+</LinearLayout>

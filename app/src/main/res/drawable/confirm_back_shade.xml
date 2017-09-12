@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true" >
+        <nine-patch android:src="@drawable/tab_selected_team"/>
+    </item>
+    <item android:state_selected="true">
+        <nine-patch android:src="@drawable/tab_selected_team"/>
+    </item>
+    <item android:state_pressed="false">
+        <nine-patch android:src="@drawable/tab_unselected_zdv"/>
+    </item>
+    <item android:state_selected="false">
+        <nine-patch android:src="@drawable/tab_unselected_zdv"/>
+    </item>
+</selector>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg">
+
+
+
+
+    <com.zdv.shangtongtianxia.customView.RecyclerViewWithEmpty
+        android:id="@+id/terminal_data_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="100dp"
+        android:background="@color/white" />
+
+    <include
+        android:id="@+id/empty_lay"
+        layout="@layout/empty_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/terminal_search_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="53dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp">
+
+        <TextView
+            android:id="@+id/header_search_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_background_gray"
+            android:paddingLeft="20dp"
+            android:visibility="visible"
+            android:paddingRight="5dp"
+            android:layout_gravity="center|left"
+            android:textColor="@color/gray"
+            android:gravity="center|left"
+            android:text="请输入查询团队的关键字"
+            />
+        <include
+            layout="@layout/search_bar_lay2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/terminal_header"
+        layout="@layout/header_lay"
+        android:visibility="visible" />
+</RelativeLayout>

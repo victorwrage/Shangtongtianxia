@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg">
+
+
+
+
+    <LinearLayout
+        android:id="@+id/withdraw_step1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/withdraw_bank_card_lay"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/withdraw_icon1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/icbc" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/withdraw_icon1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/withdraw_bank_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(测试)中国工商银行"
+                    android:textColor="@color/shangtongtianx_btn_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/withdraw_bank_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="尾号9806的储蓄卡"
+                    android:textColor="@color/shangtongtianx_check_txt"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/go_ahead" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/withdraw_cash_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="提现金额"
+                android:textColor="@color/shangtongtianx_check_txt"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/withdraw_cash_tv"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center|left"
+                android:text="￥0"
+                android:textColor="@color/black"
+                android:textSize="32sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="60dp"
+                android:background="@color/shangtongtianx_sep" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/withdraw_balance_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="可用余额 0元"
+                    android:textColor="@color/shangtongtianx_check_txt"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/withdraw_all_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="全部提现"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/withdraw_submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/big_btn_backgroud"
+                android:gravity="center"
+                android:text="确认提现(两小时内到账)"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/withdraw_step2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="45dp"
+        android:visibility="gone">
+
+        <com.zdv.shangtongtianxia.customView.RecyclerViewWithEmpty
+            android:id="@+id/withdraw_bank_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="visible" />
+
+        <include
+            android:id="@+id/empty_lay"
+            layout="@layout/empty_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/withdraw_step3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="45dp"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text="持卡人名字"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/shangtongtianx_check_txt" />
+
+                    <EditText
+                        android:id="@+id/withdraw_name_et"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/white"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:hint="请输入持卡人姓名"
+                        android:maxLines="1"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/shangtongtianx_sep" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text="身份证号"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/shangtongtianx_check_txt" />
+
+                    <EditText
+                        android:id="@+id/withdraw_card_et"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/white"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:hint="请输入身份证号"
+                        android:maxLines="1"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/shangtongtianx_sep" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text="银行卡号"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/shangtongtianx_check_txt" />
+
+                    <EditText
+                        android:id="@+id/withdraw_bank_num_et"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/white"
+                        android:hint="请输入您的银行卡号码"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/shangtongtianx_sep" />
+
+                <LinearLayout
+                    android:id="@+id/withdraw_type_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text="卡号类型"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/shangtongtianx_check_txt" />
+
+                    <TextView
+                        android:id="@+id/withdraw_type_sp"
+                        android:layout_width="160dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="18sp"
+                        android:gravity="center|left"
+                        android:layout_gravity="center|left"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/white"
+                   />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/shangtongtianx_sep" />
+
+                <LinearLayout
+                    android:id="@+id/withdraw_bank_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text="发卡银行"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/shangtongtianx_check_txt" />
+
+                    <TextView
+                        android:id="@+id/withdraw_bank_sp"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:textSize="18sp"
+                        android:gravity="center|left"
+                        android:layout_gravity="center|left"
+                        android:background="@color/white"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/shangtongtianx_sep" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text="手机号码"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/shangtongtianx_check_txt" />
+
+                    <EditText
+                        android:id="@+id/withdraw_phone_et"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/white"
+                        android:hint="请输入预留手机号码"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:padding="5dp" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/shangtongtianx_sep" />
+                <LinearLayout
+                    android:id="@+id/withdraw_cvn2_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text="C V N 2"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/shangtongtianx_check_txt" />
+
+                    <EditText
+                        android:id="@+id/withdraw_cvn2_et"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/white"
+                        android:hint="请输入信用卡背后3位CVN2"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:padding="5dp" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/shangtongtianx_sep" />
+                <LinearLayout
+                    android:id="@+id/withdraw_available_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text="有效期"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/shangtongtianx_check_txt" />
+
+                    <TextView
+                        android:id="@+id/withdraw_available_tv"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/white"
+                        android:hint="请选择有效日期"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:padding="10dp" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/shangtongtianx_sep" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/actor_phone_code_tv"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text="手机验证码"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/actor_code_sep_iv"
+                        android:layout_width="1dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/actor_phone_code_tv"
+
+                        android:background="@color/shangtongtianx_check_txt" />
+
+                    <LinearLayout
+                        android:id="@+id/withdraw_code_lay"
+                        android:layout_width="90dp"
+                        android:layout_height="45dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/big_btn_backgroud"
+                        android:gravity="center"
+                        android:padding="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:text="获取验证码"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/withdraw_code_et"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toLeftOf="@+id/actor_code_lay"
+                        android:layout_toRightOf="@+id/actor_code_sep_iv"
+                        android:background="@color/white"
+                        android:hint="请输入验证码"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:padding="5dp" />
+
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/shangtongtianx_sep" />
+
+
+                <Button
+                    android:id="@+id/withdraw_add_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/big_btn_backgroud"
+                    android:gravity="center"
+                    android:text="确认"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/withdraw_header"
+        layout="@layout/header_lay"
+        android:visibility="visible" />
+</RelativeLayout>

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/research_key_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="45dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp"
+
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="选择分类"/>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <LinearLayout
+                    android:id="@+id/research_catering_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:layout_margin="1dp"
+                        android:text="餐饮" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/research_physical_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:layout_margin="1dp"
+                        android:text="健身" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/research_cosmetics_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_margin="1dp"
+                        android:gravity="center"
+                        android:text="化妆品" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <LinearLayout
+                    android:id="@+id/research_clothing_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_margin="1dp"
+                        android:gravity="center"
+                        android:text="服装" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/research_goods_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:layout_margin="1dp"
+                        android:text="日用百货" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/research_entertainment_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:layout_margin="1dp"
+                        android:text="娱乐" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <LinearLayout
+                    android:id="@+id/research_phone_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:layout_margin="1dp"
+                        android:text="话费充值" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/research_technology_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:layout_margin="1dp"
+                        android:text="科技" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/research_electrical_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:layout_margin="1dp"
+                        android:text="家电" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <LinearLayout
+                    android:id="@+id/research_other_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:layout_margin="1dp"
+                        android:text="其它" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:background="@drawable/shape"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:background="@drawable/shape"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:text="" />
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/research_picker_lay"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/research_key_lay"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/big_btn_backgroud_gray">
+        <ImageView
+            android:id="@+id/coin_icon1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/fukuan"/>
+        <TextView
+            android:id="@+id/research_choose_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/coin_icon1"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="15dp"
+            android:text="选择时间"/>
+        <TextView
+            android:id="@+id/research_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/research_choose_tv"
+
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="15dp"
+            android:text="2017-08-09"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/go_ahead"/>
+    </RelativeLayout>
+     <TextView
+         android:id="@+id/research_detail_tv"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_centerHorizontal="true"
+         android:layout_marginBottom="10dp"
+         android:text="查看资金明细"/>
+
+
+    <include
+        android:id="@+id/research_header"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/search_bar_lay"/>
+</RelativeLayout>

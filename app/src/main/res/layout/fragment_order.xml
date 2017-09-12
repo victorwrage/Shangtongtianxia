@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:background="@color/activity_bg">
+
+    <LinearLayout
+        android:id="@+id/order_top_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="45dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tl_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            tl:tl_indicator_gravity="BOTTOM"
+            tl:tl_textBold="SELECT"
+            tl:tl_textSelectColor="@color/shangtongtianx_tab2"
+            tl:tl_textUnselectColor="@color/shangtongtianx_tab_txt"
+            tl:tl_indicator_width_equal_title="true"
+            tl:tl_tab_space_equal="true"
+            tl:tl_indicator_color="@color/shangtongtianx_tab2"
+            tl:tl_indicator_style="NORMAL"
+            tl:tl_underline_height="1dp"/>
+
+
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/order_top_lay"/>
+
+    <include
+        android:id="@+id/coin_header"
+        layout="@layout/header_lay"
+        android:visibility="visible" />
+</RelativeLayout>

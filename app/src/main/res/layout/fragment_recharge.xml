@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:id="@+id/recharge_step1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="45dp">
+
+
+        <Button
+            android:id="@+id/recharge_submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:minHeight="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/big_btn_backgroud"
+            android:gravity="center"
+            android:text="去充值"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:id="@+id/recharge_content_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/recharge_submit_btn"
+            android:visibility="gone"
+            android:layout_marginTop="80dp"
+            android:layout_centerInParent="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/recharge_no_record_iv"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/recharge_icon1"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/recharge_record_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/coin_icon1"
+                        android:background="@drawable/shape_white_bg"
+                        android:gravity="center|left"
+                        android:paddingLeft="15dp"
+                        android:text="最近一次消费"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/recharge_date_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/shape_white_bg">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@id/coin_icon1"
+                            android:text="时间："
+                            android:textColor="@color/shangtongtianx_btn_text"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/recharge_date_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:text="2017-08-11"
+                            android:textColor="@color/shangtongtianx_check_txt"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/recharge_name_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/shape_white_bg">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@id/coin_icon1"
+                            android:text="名称："
+                            android:textColor="@color/shangtongtianx_btn_text"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/recharge_name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:text="烤鱼火锅4人份"
+                            android:textColor="@color/shangtongtianx_check_txt"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/recharge_cash_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/shape_white_bg">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@id/coin_icon1"
+                            android:text="金额："
+                            android:textColor="@color/shangtongtianx_btn_text"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/recharge_cash_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:text="280(RMB)"
+                            android:textColor="@color/shangtongtianx_check_txt"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/coin_icon1"
+                        android:background="@drawable/shape_white_bg"
+                        android:gravity="center|left"
+                        android:paddingLeft="15dp"
+                        android:text="数据显示"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/recharge_total_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/shape_white_bg">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@id/coin_icon1"
+                            android:text="消费总计："
+                            android:textColor="@color/shangtongtianx_btn_text"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/recharge_total_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:text="280(RMB)"
+                            android:textColor="@color/shangtongtianx_check_txt"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/recharge_balance_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/shape_white_bg">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@id/coin_icon1"
+                            android:text="可用余额："
+                            android:textColor="@color/shangtongtianx_btn_text"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/recharge_balance_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:text="280(RMB)"
+                            android:textColor="@color/shangtongtianx_check_txt"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/recharge_coin_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/shape_white_bg">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@id/coin_icon1"
+                            android:text="累计商通币："
+                            android:textColor="@color/shangtongtianx_btn_text"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/recharge_coin_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:text="880(枚)"
+                            android:textColor="@color/shangtongtianx_check_txt"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/terminal_search_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="53dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp">
+
+        <TextView
+            android:id="@+id/header_search_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/big_btn_backgroud_gray"
+            android:paddingLeft="20dp"
+            android:visibility="visible"
+            android:paddingRight="5dp"
+            android:layout_gravity="center|left"
+            android:textColor="@color/gray"
+            android:gravity="center|left"
+            android:text="请输入商家关键字"
+            />
+        <include
+            layout="@layout/search_bar_lay2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/recharge_header"
+        layout="@layout/header_lay"
+        android:visibility="visible" />
+</RelativeLayout>

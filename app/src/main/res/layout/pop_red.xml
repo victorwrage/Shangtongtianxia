@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/red_bg1">
+
+    <!-- 关闭按钮框 -->
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/close"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/bd_ocr_close"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+    <!-- 头像以及相关文字 -->
+    <RelativeLayout
+        android:layout_below="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/top_title_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/head_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/user_avartar"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统用户"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/head_img"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/gold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                android:textColor="#f5a52b"
+                android:text="给你发了一个红包"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_below="@+id/textView1"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/gold"
+                android:visibility="invisible"
+                android:textSize="23sp"
+                android:text="恭喜发财，大吉大利"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_title_lay"
+            android:layout_marginTop="50dp">
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/gold"
+                android:visibility="gone"
+                android:textSize="23sp"
+                android:text="5个商通币"/>
+            <Button
+                android:id="@+id/open_btn"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/textView3"
+                android:background="@drawable/anim"
+
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp">
+
+        <LinearLayout
+            android:id="@+id/actor_work_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text="角色选择"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/shangtongtianx_check_txt" />
+
+                    <Spinner
+                        android:id="@+id/actor_actor_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/white" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/shangtongtianx_sep" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text="姓名"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/shangtongtianx_check_txt" />
+
+                    <EditText
+                        android:id="@+id/actor_name_et"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:background="@color/white"
+                        android:hint="请输入您的真实姓名"
+                        android:maxLines="1"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/shangtongtianx_sep" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text="手机号码"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/shangtongtianx_check_txt" />
+
+                    <EditText
+                        android:id="@+id/actor_phone_et"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/white"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true"
+                        android:hint="请输入您的常用手机号码"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/shangtongtianx_sep" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/actor_phone_code_tv"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text="验证码"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/actor_code_sep_iv"
+                        android:layout_width="1dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/actor_phone_code_tv"
+
+                        android:background="@color/shangtongtianx_check_txt" />
+
+                    <LinearLayout
+                        android:id="@+id/actor_code_lay"
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/big_btn_backgroud"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/actor_code_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:text="获取验证码"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/actor_code_et"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/white"
+                        android:inputType="number"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:hint="请输入验证码"
+                        android:maxLines="1"
+                        android:layout_toRightOf="@id/actor_code_sep_iv"/>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/shangtongtianx_sep" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text="推荐码"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/shangtongtianx_check_txt" />
+
+                    <EditText
+                        android:id="@+id/actor_invite_et"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/white"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true"
+                        android:hint="请输入推荐码"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/shangtongtianx_sep" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text="公司名称"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/shangtongtianx_check_txt" />
+
+                    <EditText
+                        android:id="@+id/actor_firm_et"
+                        android:layout_width="260dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/white"
+                        android:hint="请输入您的公司名称"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/shangtongtianx_sep" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text="机构类型"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/shangtongtianx_check_txt" />
+
+                    <EditText
+                        android:id="@+id/actor_firm_type_et"
+                        android:layout_width="260dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/white"
+                        android:enabled="false"
+                        android:hint="机构类型"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:background="@color/shangtongtianx_sep" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/actor_firm_add_tv"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text="公司地址"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/actor_firm_sep_iv"
+                        android:layout_width="1dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/actor_firm_add_tv"
+                        android:background="@color/shangtongtianx_check_txt" />
+
+                    <LinearLayout
+                        android:id="@+id/actor_location_lay"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/big_btn_backgroud_blue"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="17dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/frofile_icon5" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/actor_firm_add_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/actor_firm_sep_iv"
+                        android:layout_toLeftOf="@id/actor_location_lay"
+                        android:background="@color/white"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true"
+                        android:hint="请输入您的公司地址"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:padding="5dp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/shangtongtianx_sep" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="3dp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:text="温馨提示：请仔细核对您的资料后点击确认提交!"
+                    android:textColor="@color/shangtongtianx_check_txt"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/actor_submit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/big_btn_backgroud"
+                    android:gravity="center"
+                    android:text="下一步"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/actor_step2_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/actor_pay_title"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:lineSpacingExtra="3dp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:text="付款金额"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/actor_pay_sep"
+                    android:layout_width="1dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/actor_pay_title"
+                    android:background="@color/shangtongtianx_check_txt" />
+
+                <TextView
+                    android:id="@+id/actor_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:maxLines="1"
+                    android:text="人民币(元)"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/actor_cash_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:enabled="false"
+                    android:singleLine="true"
+                    android:layout_toLeftOf="@+id/actor_unit"
+                    android:layout_toRightOf="@+id/actor_pay_sep"
+                    android:background="@color/white"
+                    android:hint="请输入金额"
+                    android:maxLines="1"
+                    android:padding="5dp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/shangtongtianx_sep" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:lineSpacingExtra="3dp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:text="支付方式"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/shangtongtianx_check_txt" />
+
+                <Spinner
+                    android:id="@+id/actor_pay_type_sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/shangtongtianx_sep" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:lineSpacingExtra="3dp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:text="通道类型"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/shangtongtianx_check_txt" />
+
+                <Spinner
+                    android:id="@+id/actor_tuner_type_sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/shangtongtianx_sep" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/actor_pay_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/big_btn_backgroud"
+            android:gravity="center"
+            android:text="确认付款并提交"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/actor_step3_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="45dp"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/verify_icon7" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="恭喜,申请成功,请扫描下面二维码完成付款"
+                    android:textColor="@color/shangtongtianx_txt"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/actor_success_tip_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:text=" 感谢您的信任,您已成为我的第682位VIP会员"
+                android:textColor="@color/shangtongtianx_btn_text" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+
+                android:layout_marginRight="15dp"
+                android:background="@drawable/bg_round_white">
+
+
+
+                <ImageView
+                    android:id="@+id/actor_qcode_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="20dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/qcode" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/actor_qcode_iv"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/pay_set_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:text="设置金额"
+                        android:textColor="@color/shangtongtianx_txt" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:background="@color/shangtongtianx_check_txt" />
+
+                    <TextView
+                        android:id="@+id/actor_save_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="保存图片"
+                        android:textColor="@color/shangtongtianx_txt" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/actor_back_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/big_btn_backgroud"
+            android:gravity="center"
+            android:text="返回系统首页"
+            android:textColor="@color/white" />
+    </LinearLayout>
+    <include
+        android:id="@+id/actor_header"
+        layout="@layout/header_lay"
+        android:visibility="visible" />
+</RelativeLayout>

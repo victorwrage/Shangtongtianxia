@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/activity_bg">
+
+
+    <LinearLayout
+        android:id="@+id/map_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/map_merchant_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/map_merchant2" />
+
+            <TextView
+                android:id="@+id/map_merchant_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:text="商家数:8377户"
+                android:textColor="#DB412E"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/coin_trasnfer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/map_merchant" />
+
+            <TextView
+                android:id="@+id/map_member_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:text="会员:245人"
+                android:textColor="#1898DC"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/map"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="45dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+     <!--<ViewStub
+         android:id="@+id/map_stub"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_marginBottom="50dp"
+         android:layout_marginTop="50dp"
+         android:inflatedId="@+id/bmapView"
+         android:layout="@layout/map_container"/>-->
+
+    <include
+        android:id="@+id/map_header"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/search_bar_lay"/>
+</RelativeLayout>

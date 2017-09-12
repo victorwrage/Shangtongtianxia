@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/coin_history_item_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        app:cardCornerRadius="8dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/coin_history_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/coin_history_icon1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/coin_avatar" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/coin_history_icon1"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/coin_history_state_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="余额"
+                        android:textColor="@color/yellow"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/coin_history_type_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="总计10个"
+                        android:textColor="@color/gray"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/coin_history_pay_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="10"
+                    android:textColor="@color/green"
+                    android:textSize="26sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/coin_history_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/coin_history_lay"
+                android:layout_marginLeft="10dp"
+
+                android:text="2017-08-18 19:00:44"
+                android:textColor="@color/shangtongtianx_btn_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/coin_history_opacount_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/coin_history_lay"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="wr@ewew"
+                android:textColor="@color/gray"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

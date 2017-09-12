@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:orderInCategory="1"
+        android:icon="@drawable/distance"
+        android:title="1-----3公里"/>
+    <item
+        android:orderInCategory="2"
+        android:icon="@drawable/distance"
+        android:title="3-----5公里"/>
+    <item
+        android:orderInCategory="3"
+        android:icon="@drawable/distance"
+        android:title="5-----8公里"/>
+    <item
+        android:orderInCategory="4"
+        android:icon="@drawable/distance"
+        android:title="10公里以上"/>
+</menu>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="H:\work\Shangtongtianxia\slidingmenu\assets"/><source path="H:\work\Shangtongtianxia\slidingmenu\build\generated\assets\shaders\release"/></dataSet><dataSet config="release"><source path="H:\work\Shangtongtianxia\slidingmenu\src\release\assets"/></dataSet></merger>

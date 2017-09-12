@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg">
+
+
+
+    <com.zdv.shangtongtianxia.customView.slideItemView.SlideListView
+        xmlns:slide="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/address_data_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        slide:slideAnimationTime="200"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="45dp"
+        slide:slideLeftAction="scroll"
+        slide:slideMode="both"
+        slide:slideRightAction="scroll" />
+    <include
+        android:id="@+id/empty_lay"
+        layout="@layout/empty_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/address_add_lay"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@drawable/big_btn_backgroud_cancel">
+        <ImageView
+            android:id="@+id/coin_icon1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/add"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="5dp"
+            android:text="新增地址"/>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/address_header"
+        layout="@layout/header_lay"
+        android:visibility="visible" />
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:background="@color/activity_bg">
+
+    <LinearLayout
+        android:id="@+id/coupon_top_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="45dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.flyco.tablayout.SegmentTabLayout
+            android:id="@+id/tl_1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            tl:tl_bar_color="@color/white"
+            tl:tl_indicator_corner_radius="0dp"
+            tl:tl_indicator_color="@color/shangtongtianx_tab2"/>
+
+
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/fl_change"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@id/coupon_top_lay"/>
+
+    <include
+        layout="@layout/header_lay"
+        android:visibility="visible" />
+</RelativeLayout>

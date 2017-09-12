@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/withdraw_bank_card_lay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/withdraw_bank_icon1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/icbc" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/withdraw_bank_icon1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/withdraw_bank_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中国工商银行"
+                android:textColor="@color/shangtongtianx_btn_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/withdraw_bank_num1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="尾号9806的储蓄卡"
+                android:textColor="@color/shangtongtianx_check_txt"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/withdraw_select_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/selected"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>
