@@ -178,7 +178,7 @@ public class QueryPresent implements IRequestPresent {
 
 
     @Override
-    public void QueryRegister(String secret, String tel, String password, String name, String verify, String vcode , String referee) {
+    public void QueryRegister(String secret, String tel, String password, String name, String verify, String vcode, String referee) {
         iRequestMode.QueryRegister(secret, tel, password, name, verify, vcode, referee)
                 .onErrorReturn(s -> new ResponseBody() {
                     @Override
@@ -229,7 +229,7 @@ public class QueryPresent implements IRequestPresent {
     public void QueryCode(@Field(Constant.SECRET) String secret,
                           @Field(Constant.STATUS) String status,
                           @Field(Constant.PHONE) String phone) {
-        iRequestMode.QueryCode(secret, "8",status, phone)
+        iRequestMode.QueryCode(secret, "8", status, phone)
                 .onErrorReturn(s -> new ResponseBody() {
                     @Override
                     public MediaType contentType() {
@@ -423,8 +423,8 @@ public class QueryPresent implements IRequestPresent {
     }
 
     @Override
-    public void QueryMemberSign(String secret, String memcode,String type) {
-        iRequestMode.QueryMemberSign(secret, memcode,type)
+    public void QueryMemberSign(String secret, String memcode, String type) {
+        iRequestMode.QueryMemberSign(secret, memcode, type)
                 .onErrorReturn(s -> new ResponseBody() {
                     @Override
                     public MediaType contentType() {
@@ -805,6 +805,41 @@ public class QueryPresent implements IRequestPresent {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(s -> ((IMemberView) iView).ResolveIsVerify(s));
+    }
+
+    /**
+     * 查询会员卡劵
+     * @param memcode
+     * @param sign
+     */
+    @Override
+    public void QueryMemCurpons(String memcode, String sign) {
+        iRequestMode.queryMemCurpons(memcode, sign)
+                .onErrorReturn(s -> new ResponseBody() {
+                    @Override
+                    public MediaType contentType() {
+                        return null;
+                    }
+
+                    @Override
+                    public long contentLength() {
+                        return 0;
+                    }
+
+                    @Override
+                    public BufferedSource source() {
+                        return null;
+                    }
+                })
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(s -> ((IMemberView) iView).ResolveMessage(s));
+    }
+
+
+    @Override
+    public void QueryUseCurpon(String sign, String memcode, String sn_code, String number) {
+
     }
 
 }

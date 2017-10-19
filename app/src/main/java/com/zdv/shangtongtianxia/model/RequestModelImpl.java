@@ -157,5 +157,15 @@ public class RequestModelImpl implements IRequestMode {
         return iRequestMode.QueryIsVerify(secret, memcode);
     }
 
+    @Override
+    public Flowable<ResponseBody> queryMemCurpons(@Field(Constant.MEMCODE) String memcode, @Field(Constant.SIGN) String sign) {
+        return null;
+    }
+
+    @Override
+    public Flowable<ResponseBody> queryUseCurpon(@Field(Constant.SIGN) String sign, @Field(Constant.MEMCODE) String memcode, @Field(Constant.SN_CODE) String sn_code, @Field(Constant.NUMBER) String number) {
+        return null;
+    }
+
 
 }

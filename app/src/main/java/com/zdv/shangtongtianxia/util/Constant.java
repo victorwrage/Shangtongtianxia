@@ -18,6 +18,8 @@ public class Constant {
 
     public static final String URL_BAIBAO = "http://www.o2obaibao.com/bsystem/";//百宝
     public static final String URL_SHANGTONGTIANXIA = "http://wdt.qianhaiwei.com/ThinkCmf/";//百宝
+    public static final String URL_TONGDUI = "http://wdt.qianhaiwei.com/Curpons/";//通兑
+
     public static final String CONSTANT_MERCHANT_ID = "617061910264433";//
     public static final String URL_MESSAGE = "http://c.kf10000.com/";//短信
     public static final String PUBLIC_KEY = "z4sgErHeEww5uwhTrjF6kM5qdKjpifQg6bp2iRAumnvRx7GV57laelZmX1e405QD";//公钥
@@ -29,32 +31,34 @@ public class Constant {
 
     public static final String PUBLIC_OCR_KEY = "RdQ9PnT67K4eyqEOPv6T9ZRH";//baidu ocr api key
     public static final String PUBLIC_OCR_SECRET = "WCfE8GCjHdrnftXVNbIj1XyRIGeGgHUH";//secret
+    public static final String PUBLIC_TONGDUI_KEY = "X9o6O2038GhkN1OlFfzZLoQncCvE8LENZ2WSYE3pARUFZzP";//通兑key
+    public static final String PUBLIC_SHARE_URL = "http://wdt.qianhaiwei.com/ThinkCmf/index.php?g=Portal&m=Home&a=sshare&rc=";//分享链接
 
 
     public static final String MESSAGE_USER_NAME = "5234TSGF2";//账号
-    public static  String MESSAGE_PASSWORD = "852741";//密码
+    public static String MESSAGE_PASSWORD = "852741";//密码
 
 
-    public static  String MESSAGE_UPDATE_TIP = "";//
-    public static  String MESSAGE_SIGN_TIP = "签到成功";//
+    public static String MESSAGE_UPDATE_TIP = "";//
+    public static String MESSAGE_SIGN_TIP = "签到成功";//
 
-    public static  String MESSAGE_CODE = "";	//生成的验证码
-    public static final int MESSAGE_SEND_SUCCESS = 100;	//成功
-    public static final int MESSAGE_SEND_FAIL = MESSAGE_SEND_SUCCESS+1;	//失败
-    public static final int MESSAGE_SEND_PW_ERR = MESSAGE_SEND_FAIL+1;	//密码不对
-    public static final int MESSAGE_SEND_NUM_ERR = MESSAGE_SEND_PW_ERR+1;	//接收号码格式错误
-    public static final int MESSAGE_SEND_CONTENT_ERR = MESSAGE_SEND_NUM_ERR+1;	//敏感内容,会同时返回
-    public static final int MESSAGE_SEND_TOO_FREQUENCY = MESSAGE_SEND_CONTENT_ERR+1;	//频率过快
-    public static final int MESSAGE_SEND_LIMIT = MESSAGE_SEND_TOO_FREQUENCY+1;	//限制发送
+    public static String MESSAGE_CODE = "";    //生成的验证码
+    public static final int MESSAGE_SEND_SUCCESS = 100;    //成功
+    public static final int MESSAGE_SEND_FAIL = MESSAGE_SEND_SUCCESS + 1;    //失败
+    public static final int MESSAGE_SEND_PW_ERR = MESSAGE_SEND_FAIL + 1;    //密码不对
+    public static final int MESSAGE_SEND_NUM_ERR = MESSAGE_SEND_PW_ERR + 1;    //接收号码格式错误
+    public static final int MESSAGE_SEND_CONTENT_ERR = MESSAGE_SEND_NUM_ERR + 1;    //敏感内容,会同时返回
+    public static final int MESSAGE_SEND_TOO_FREQUENCY = MESSAGE_SEND_CONTENT_ERR + 1;    //频率过快
+    public static final int MESSAGE_SEND_LIMIT = MESSAGE_SEND_TOO_FREQUENCY + 1;    //限制发送
 
 
     public static final int DEFAULT_TIMEOUT = 20;//超时时间(S)
 
     public static final int DEFAULT_MESSAGE_TIMEOUT = 120;//短信验证码超时时间(S)
-    public static final String RECEIVE_LOCATION_SUCCESS = "location_success";	//定位成功
+    public static final String RECEIVE_LOCATION_SUCCESS = "location_success";    //定位成功
 
     public static JSONObject user_info;
-    public static HashMap<String,String> temp_info;
+    public static HashMap<String, String> temp_info;
     public static String photo_path;
     public static int photo_idx;
     public static final String USER_INFO_ID = "user_id";//缓存
@@ -77,7 +81,9 @@ public class Constant {
 
     public static final int FRAGMENT_CLEAR_DATE = 1000;//重新加载数据
 
-    /**---------------数据提交字段集合----------------- **/
+    /**
+     * ---------------数据提交字段集合-----------------
+     **/
     public static final String MACHINE_ID = "machine_id";
 
 
@@ -128,6 +134,8 @@ public class Constant {
     public static final String BANKFIRM = "bankfirm";
     public static final String ACCOUNT = "account";
     public static final String PASSWORD = "password";
+    public static final String SN_CODE = "sn_code";
+    public static final String NUMBER = "number";
 
 
     public static int InDirectTo = 0;

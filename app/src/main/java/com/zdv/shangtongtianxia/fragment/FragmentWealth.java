@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class FragmentWealth extends BaseFragment implements IView{
+public class FragmentWealth extends BaseFragment implements IView {
 
     QueryPresent present;
     Utils util;
@@ -63,12 +63,12 @@ public class FragmentWealth extends BaseFragment implements IView{
 
     private void initView() {
 
-        RxView.clicks(wealth_coin).throttleFirst(500, TimeUnit.MILLISECONDS).subscribe(s ->  Coin());
-        RxView.clicks(wealth_profit).throttleFirst(500, TimeUnit.MILLISECONDS).subscribe(s ->  Profit());
-        RxView.clicks(wealth_recharge).throttleFirst(500, TimeUnit.MILLISECONDS).subscribe(s ->  Recharge());
-        RxView.clicks(wealth_spread).throttleFirst(500, TimeUnit.MILLISECONDS).subscribe(s ->  Share());
-        RxView.clicks(wealth_history).throttleFirst(500, TimeUnit.MILLISECONDS).subscribe(s ->  Search());
-        RxView.clicks(header_btn_lay).throttleFirst(500, TimeUnit.MILLISECONDS).subscribe(s ->  Back());
+        RxView.clicks(wealth_coin).throttleFirst(500, TimeUnit.MILLISECONDS).subscribe(s -> Coin());
+        RxView.clicks(wealth_profit).throttleFirst(500, TimeUnit.MILLISECONDS).subscribe(s -> Profit());
+        RxView.clicks(wealth_recharge).throttleFirst(500, TimeUnit.MILLISECONDS).subscribe(s -> Recharge());
+        RxView.clicks(wealth_spread).throttleFirst(500, TimeUnit.MILLISECONDS).subscribe(s -> Share());
+        RxView.clicks(wealth_history).throttleFirst(500, TimeUnit.MILLISECONDS).subscribe(s -> Search());
+        RxView.clicks(header_btn_lay).throttleFirst(500, TimeUnit.MILLISECONDS).subscribe(s -> Back());
         header_title.setText("财富");
     }
 
@@ -83,18 +83,19 @@ public class FragmentWealth extends BaseFragment implements IView{
     }
 
     private void Search() {
-       listener.gotoResearch();
+        listener.gotoResearch();
     }
 
     private void Share() {
-        if(Constant.user_info ==null){
-            VToast.toast(getContext(),"请先注册");
+        if (Constant.user_info == null) {
+            VToast.toast(getContext(), "请先注册");
             return;
         }
         Intent shareIntent = new Intent();
         shareIntent.setAction(Intent.ACTION_SEND);
-        shareIntent.putExtra(Intent.EXTRA_TEXT, Constant.user_info.optString("name") + " 邀请你体验【商通天下】，邀请码为:" + Constant.user_info.optString("tel")
-                + "\r\n下载地址:http://t.cn/RNg0dqH");
+  /*      shareIntent.putExtra(Intent.EXTRA_TEXT, Constant.user_info.optString("name") + " 邀请你体验【商通天下】，邀请码为:" + Constant.user_info.optString("tel")
+                + "\r\n下载地址:http://t.cn/RNg0dqH");*/
+        shareIntent.putExtra(Intent.EXTRA_TEXT, Constant.user_info.optString("name") + " 邀请你体验【商通天下】，欢迎点击下载:" + Constant.PUBLIC_SHARE_URL + Constant.user_info.optString("tel"));
         shareIntent.setType("text/plain");
         startActivity(Intent.createChooser(shareIntent, "分享邀请码"));
     }
@@ -104,7 +105,7 @@ public class FragmentWealth extends BaseFragment implements IView{
     }
 
     private void Profit() {
-       listener.gotoProfit();
+        listener.gotoProfit();
     }
 
     private void Coin() {

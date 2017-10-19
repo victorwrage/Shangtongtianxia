@@ -6,6 +6,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,7 +33,7 @@ import java.util.concurrent.TimeUnit;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class FragmentCoupon extends BaseFragment  implements IView ,OnTabSelectListener{
+public class FragmentCoupon extends BaseFragment implements IView, OnTabSelectListener {
 
     QueryPresent present;
     Utils util;
@@ -56,7 +57,7 @@ public class FragmentCoupon extends BaseFragment  implements IView ,OnTabSelectL
     SegmentTabLayout tl_1;
     CouponFragment couponFragment;
     private final String[] mTitles = {"待兑换"
-            , "已兑换","已过期" };
+            , "已兑换", "已过期"};
 
 
     @Override
@@ -75,21 +76,21 @@ public class FragmentCoupon extends BaseFragment  implements IView ,OnTabSelectL
     }
 
     private void initView() {
-        popupWindowView = View.inflate(getContext(),R.layout.pop_menu, null);
+        popupWindowView = View.inflate(getContext(), R.layout.pop_menu, null);
 
-        RxView.clicks(header_btn_lay).throttleFirst(500, TimeUnit.MILLISECONDS).subscribe(s ->  Back());
-    //    RxView.clicks(header_setting_lay).throttleFirst(500, TimeUnit.MILLISECONDS).subscribe(s ->  ShowPopupWindow(header_setting_lay));
+        RxView.clicks(header_btn_lay).throttleFirst(500, TimeUnit.MILLISECONDS).subscribe(s -> Back());
+        //    RxView.clicks(header_setting_lay).throttleFirst(500, TimeUnit.MILLISECONDS).subscribe(s ->  ShowPopupWindow(header_setting_lay));
 
         header_title.setText("我的通兑");
-    //    header_setting_lay.setVisibility(View.VISIBLE);
-    //    header_setting_iv.setImageResource(R.drawable.team_icon1);
+        //    header_setting_lay.setVisibility(View.VISIBLE);
+        //    header_setting_iv.setImageResource(R.drawable.team_icon1);
 
         tl_1.setTabData(mTitles);
         tl_1.setOnTabSelectListener(this);
         tl_1.setCurrentTab(0);
         couponFragment = CouponFragment.getInstance(0);
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.fl_change, couponFragment,"COUPON_FRAGMENT");
+        fragmentTransaction.add(R.id.fl_change, couponFragment, "COUPON_FRAGMENT");
         fragmentTransaction.commit();
 
     }
@@ -101,12 +102,12 @@ public class FragmentCoupon extends BaseFragment  implements IView ,OnTabSelectL
             popupWindow.setAnimationStyle(R.style.AnimationAlphaFade);
             ColorDrawable dw = new ColorDrawable(0xffffffff);
             popupWindow.setBackgroundDrawable(dw);
-         //   popupWindow.setOnDismissListener(() -> backgroundAlpha(1.0f));
+            //   popupWindow.setOnDismissListener(() -> backgroundAlpha(1.0f));
             ArrayList<String> menu_data = new ArrayList<>();
             menu_data.add("一级会员");
             menu_data.add("二级会员");
             ArrayAdapter<String> menu_adapter;
-            menu_adapter =  new ArrayAdapter<>(getContext(), R.layout.spinner_lay_item, menu_data);
+            menu_adapter = new ArrayAdapter<>(getContext(), R.layout.spinner_lay_item, menu_data);
             ListView listView = (ListView) popupWindowView.findViewById(R.id.menu_list);
             listView.setAdapter(menu_adapter);
             listView.setOnItemClickListener((adapterView, view1, i, l) -> {
@@ -115,7 +116,7 @@ public class FragmentCoupon extends BaseFragment  implements IView ,OnTabSelectL
             });
         }
         popupWindow.showAtLocation(view,
-                Gravity.TOP | Gravity.RIGHT, 0,120);
+                Gravity.TOP | Gravity.RIGHT, 0, 120);
     }
 
 
@@ -142,11 +143,10 @@ public class FragmentCoupon extends BaseFragment  implements IView ,OnTabSelectL
     @Override
     public void onTabSelect(int i) {
         couponFragment.SwitchTab(i);
-
     }
 
     @Override
-    public void onTabReselect(int i){
+    public void onTabReselect(int i) {
     }
 
 

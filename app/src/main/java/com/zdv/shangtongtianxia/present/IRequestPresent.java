@@ -10,12 +10,11 @@ package com.zdv.shangtongtianxia.present;
 public interface IRequestPresent {
 
 
-    void QueryRegister(String secret, String tel, String password, String name, String verify, String vcode ,String referee);
+    void QueryRegister(String secret, String tel, String password, String name, String verify, String vcode, String referee);
 
     void QueryOCRInfo(String inputs);
 
-    void QueryCode(String secret,String status, String phone);
-
+    void QueryCode(String secret, String status, String phone);
 
 
     void QueryLogin(String secret, String tel, String password);
@@ -30,9 +29,9 @@ public interface IRequestPresent {
 
     void QueryScanQrcode(String secret, String memcode, String auth);
 
-    void QueryChargeSTCoin(String secret, String memcode, String money ,String type   , String pay_type  ,  String trade_type);
+    void QueryChargeSTCoin(String secret, String memcode, String money, String type, String pay_type, String trade_type);
 
-    void QueryMemberSign(String secret, String memcode,String type);
+    void QueryMemberSign(String secret, String memcode, String type);
 
     void QueryTradeHistory(String secret, String memcode);
 
@@ -44,7 +43,7 @@ public interface IRequestPresent {
 
     void QueryActorMember(String secret, String memcode);
 
-    void QueryTeamMember(String secret, String memcode );
+    void QueryTeamMember(String secret, String memcode);
 
     void QueryApplyActorMember(String secret, String memcode,
                                String level_id, String company_id, String pay_type, String trade_type, String tel);
@@ -61,7 +60,25 @@ public interface IRequestPresent {
 
     void QueryDefaultAddress(String secret, String memcode, String code);
 
-    void QueryVerifyMember(String secret, String memcode, String  username, String f_img, String b_img,String id_card);
+    void QueryVerifyMember(String secret, String memcode, String username, String f_img, String b_img, String id_card);
 
     void QueryIsVerify(String secret, String memcode);
+
+    /**
+     * 查询会员卡劵接口
+     *
+     * @param memcode
+     * @param sign
+     */
+    void QueryMemCurpons(String memcode, String sign);
+
+    /**
+     * 抵消卡劵接口
+     *
+     * @param sign
+     * @param memcode
+     * @param sn_code
+     * @param number
+     */
+    void QueryUseCurpon(String sign, String memcode, String sn_code, String number);
 }

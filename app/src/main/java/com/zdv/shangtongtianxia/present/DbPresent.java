@@ -12,6 +12,7 @@ import com.zdv.shangtongtianxia.view.IView;
  */
 
 public class DbPresent implements IDbPresent {
+
     private IView iView;
     private Context context;
     private IDbPresent iRequestMode;

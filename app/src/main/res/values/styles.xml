@@ -108,4 +108,9 @@
     <item name="slide_id_front_view" type="id"/>
     <item name="slide_id_left_back_view" type="id"/>
     <item name="slide_id_right_back_view" type="id"/>
+
+    <style name="my_dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
 </resources>

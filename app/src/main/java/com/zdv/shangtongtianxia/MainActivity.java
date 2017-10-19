@@ -778,7 +778,7 @@ public class MainActivity extends BaseActivity implements IFragmentActivity, IMe
             case 10:
                 if (fragment10 == null) {
                     fragment10 = new FragmentWebview();
-                    fragment10.setLoadUrl("http://wdt.qianhaiwei.com/Project/BeforeSea/shoppingMall/index.html?key=L8NNvvqqqZr&company_id=5777#");
+                    fragment10.setLoadUrl("http://wdt.qianhaiwei.com/Project/BeforeSea/shoppingMall/index.html?key=L8NNvvqqqZr&company_id=5325");
                     ft.add(R.id.fragment_container, fragment10, PAGE_10);
                 } else {
                     fragment10.refreshState();
@@ -1000,7 +1000,7 @@ public class MainActivity extends BaseActivity implements IFragmentActivity, IMe
             case 28:
                 if (fragment10 == null) {
                     fragment10 = new FragmentWebview();
-                    fragment10.setLoadUrl("http://wdt.qianhaiwei.com/Project/BeforeSea/shoppingMall/index.html?key=L8NNvvqqqZr&company_id=5777#");
+                    fragment10.setLoadUrl("http://wdt.qianhaiwei.com/Project/BeforeSea/shoppingMall/index.html?key=L8NNvvqqqZr&company_id=5325");
                     ft.add(R.id.fragment_container, fragment10, PAGE_10);
                 } else {
                     fragment10.refreshState();

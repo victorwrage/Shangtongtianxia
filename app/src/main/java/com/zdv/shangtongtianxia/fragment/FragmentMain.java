@@ -125,7 +125,6 @@ public class FragmentMain extends BaseFragment implements IView {
                         VToast.toast(getContext(),"请打开摄像头权限");
                     }
                 });
-
     }
 
     private void initDate() {
@@ -133,7 +132,6 @@ public class FragmentMain extends BaseFragment implements IView {
         present = QueryPresent.getInstance(getContext());
         present.setView(FragmentMain.this);
         sp = getContext().getSharedPreferences(COOKIE_KEY, Context.MODE_PRIVATE);
-
     }
 
     @Override

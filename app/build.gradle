@@ -15,7 +15,7 @@ android {
         android_studio_app {
             keyAlias 'shangtongtianxia'
             keyPassword 'shangtongtianxia2017'
-            storeFile file('H:\\work\\keys\\shangtongtianxia.jks')
+            storeFile file('G:\\Android\\qhw.com.2017\\jks\\shangtongtianxia.jks')
             storePassword 'shangtongtianxia2017'
         }
     }
@@ -26,8 +26,8 @@ android {
         applicationId "com.zdv.shangtongtianxia"
         minSdkVersion 17
         targetSdkVersion 17
-        versionCode 3
-        versionName "v1.003"
+        versionCode 4
+        versionName "v1.004"
         multiDexEnabled true
         ndk {
             //选择要添加的对应cpu类型的.so库。

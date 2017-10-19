@@ -12,6 +12,10 @@ public class CouponBean implements Serializable {
     private  String type;
     private  String price;
     private  int count;
+    private  String discrib;
+    private  String available;
+    private  int cur_count;
+    private  Boolean select;
 
     public int getCount() {
         return count;
@@ -38,10 +42,6 @@ public class CouponBean implements Serializable {
     }
 
 
-    private  int cur_count;
-
-
-
     public Boolean getSelect() {
         return select;
     }
@@ -50,7 +50,7 @@ public class CouponBean implements Serializable {
         this.select = select;
     }
 
-    private  Boolean select;
+
 
 
     public String getType() {
@@ -85,8 +85,7 @@ public class CouponBean implements Serializable {
         this.available = available;
     }
 
-    private  String discrib;
-    private  String available;
+
 
     public String getStatus() {
         return status;
