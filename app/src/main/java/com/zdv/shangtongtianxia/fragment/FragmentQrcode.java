@@ -34,7 +34,6 @@ import cn.bingoogolapple.qrcode.zxing.QRCodeEncoder;
  * Created by xiaoyl
  * 创建时间:2017/8/8 18:42
  */
-
 public class FragmentQrcode extends BaseFragment implements IView {
     private final int QRCODE_FINISH = 111;
 

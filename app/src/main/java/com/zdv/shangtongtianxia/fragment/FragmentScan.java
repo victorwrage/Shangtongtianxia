@@ -50,7 +50,7 @@ import pub.devrel.easypermissions.EasyPermissions;
 import static android.content.Context.VIBRATOR_SERVICE;
 
 /**
- * Info:
+ * Info:扫码
  * Created by xiaoyl
  * 创建时间:2017/8/8 18:42
  */

@@ -344,6 +344,7 @@ public class FragmentRegister extends BaseFragment implements IUserView {
                 e.printStackTrace();
             }
             timer();
+            register_code_again.setEnabled(false);
             KLog.v("vertify=" + vertify);
             header_title.setText("验证手机号码");
         }

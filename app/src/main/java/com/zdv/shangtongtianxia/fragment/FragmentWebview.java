@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
 
 /**
  * webview
- *
+ * H5页面的加载
  * @author xiaoyl
  * @date 2013-07-20
  */
@@ -70,7 +70,7 @@ public class FragmentWebview extends BaseFragment {
         header_title.setText("商城");
         header_setting_lay.setVisibility(View.VISIBLE);
         header_setting_iv.setImageResource(R.drawable.refresh);
-        switch(Constant.InDirectTo){
+        switch (Constant.InDirectTo) {
             case 100:
                 url = "http://wdt.qianhaiwei.com/Project/BeforeSea/shoppingMall/stzcxx.html";
                 break;
@@ -89,8 +89,8 @@ public class FragmentWebview extends BaseFragment {
         if (canBack()) {
             tbsContent.goBack();
         } else {
-            KLog.v(Constant.InDirectTo+"");
-            switch(Constant.InDirectTo){
+            KLog.v(Constant.InDirectTo + "");
+            switch (Constant.InDirectTo) {
                 case 1:
                     listener.gotoUserManager();
                     break;
@@ -126,7 +126,7 @@ public class FragmentWebview extends BaseFragment {
     @Override
     public void refreshState() {
         super.refreshState();
-        switch(Constant.InDirectTo){
+        switch (Constant.InDirectTo) {
             case 100:
                 url = "http://wdt.qianhaiwei.com/Project/BeforeSea/shoppingMall/stzcxx.html";
                 break;
@@ -159,7 +159,6 @@ public class FragmentWebview extends BaseFragment {
                 return true;
             }
         });
-
     }
 
     public boolean canBack() {

@@ -228,46 +228,6 @@ public class FragmentAddress extends BaseFragment implements IAddressView, Addre
         task.execute("广东", "深圳", "南山");
 
     }
-  /*  public void onConstellationPicker(View view) {
-        boolean isChinese = Locale.getDefault().getDisplayLanguage().contains("中文");
-        OptionPicker picker = new OptionPicker(this,
-                isChinese ? new String[]{
-                        "水瓶座", "双鱼座", "白羊座", "金牛座", "双子座", "巨蟹座",
-                        "狮子座", "处女座", "天秤座", "天蝎座", "射手座", "摩羯座"
-                } : new String[]{
-                        "Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer",
-                        "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn"
-                });
-        picker.setCycleDisable(false);//不禁用循环
-        picker.setTopBackgroundColor(0xFFEEEEEE);
-        picker.setTopHeight(30);
-        picker.setTopLineColor(0xFFEE0000);
-        picker.setTopLineHeight(1);
-        picker.setTitleText(isChinese ? "请选择" : "Please pick");
-        picker.setTitleTextColor(0xFF999999);
-        picker.setTitleTextSize(12);
-        picker.setCancelTextColor(0xFFEE0000);
-        picker.setCancelTextSize(13);
-        picker.setSubmitTextColor(0xFFEE0000);
-        picker.setSubmitTextSize(13);
-        picker.setTextColor(0xFFEE0000, 0xFF999999);
-        WheelView.DividerConfig config = new WheelView.DividerConfig();
-        config.setColor(0xFFEE0000);//线颜色
-        config.setAlpha(140);//线透明度
-        config.setRatio((float) (1.0 / 8.0));//线比率
-        picker.setDividerConfig(config);
-        picker.setBackgroundColor(0xFFE1E1E1);
-        //picker.setSelectedItem(isChinese ? "处女座" : "Virgo");
-        picker.setSelectedIndex(7);
-        picker.setCanceledOnTouchOutside(true);
-        picker.setOnOptionPickListener(new OptionPicker.OnOptionPickListener() {
-            @Override
-            public void onOptionPicked(int index, String item) {
-                showToast("index=" + index + ", item=" + item);
-            }
-        });
-        picker.show();
-    }*/
 
     public void Back() {
         super.Back();

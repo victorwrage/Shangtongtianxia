@@ -41,6 +41,9 @@ import it.gmariotti.recyclerview.adapter.AlphaAnimatorAdapter;
 import lib.homhomlib.design.SlidingLayout;
 import okhttp3.ResponseBody;
 
+/**
+ * 商通币
+ */
 public class FragmentCoin extends BaseFragment implements IPayView,IMemberView ,IUserView{
 
     QueryPresent present;

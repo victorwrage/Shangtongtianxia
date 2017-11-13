@@ -1,4 +1,9 @@
 <resources>
+
+    <style name="AppThemeBase" parent="@style/Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
     <!-- 数字按钮样式 -->
     <style name="calculator_btn">
         <item name="android:layout_width">match_parent</item>

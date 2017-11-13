@@ -51,6 +51,9 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import it.gmariotti.recyclerview.adapter.AlphaAnimatorAdapter;
 
+/**
+ * 商盟分润
+ */
 public class FragmentAlienceProfit extends BaseFragment implements IView {
 
     QueryPresent present;

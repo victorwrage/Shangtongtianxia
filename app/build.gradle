@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'maven'
 apply plugin: 'org.greenrobot.greendao' // apply plugin
 repositories {
@@ -15,12 +14,12 @@ android {
         android_studio_app {
             keyAlias 'shangtongtianxia'
             keyPassword 'shangtongtianxia2017'
-            storeFile file('G:\\Android\\qhw.com.2017\\jks\\shangtongtianxia.jks')
+            storeFile file('H:\\work\\jks\\shangtongtianxia.jks')
             storePassword 'shangtongtianxia2017'
         }
     }
     compileSdkVersion 25
-    buildToolsVersion "26.0.1"
+    buildToolsVersion '26.0.2'
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "com.zdv.shangtongtianxia"
@@ -29,10 +28,16 @@ android {
         versionCode 4
         versionName "v1.004"
         multiDexEnabled true
+        flavorDimensions "release"
         ndk {
             //选择要添加的对应cpu类型的.so库。
             abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
             // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
         }
         manifestPlaceholders = [
                 JPUSH_PKGNAME: applicationId,
@@ -74,30 +79,19 @@ android {
             //签名
             signingConfig signingConfigs.android_studio_app
             applicationVariants.all { variant ->
-                variant.outputs.each { output ->
-                    def outputFile = output.outputFile
-                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                        // 输出apk名称为app_v1.0_2015-xx-xx_xxxx.apk
-                        //def fileName = "app_v${defaultConfig.versionName}_${releaseTime()}.apk"
-                        //     def fileName = "app_v${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
-                        def fileName = "商通天下_${defaultConfig.versionName}.apk"
-                        output.outputFile = new File(outputFile.parent, fileName)
-                    }
+                variant.outputs.all {
+                   // def newApkName = "商通天下_"   + variant.versionName + "(" + variant.versionCode + ")" + ".apk";
+                   // outputFileName = new File("${project.projectDir}/../outputs/apks/" + variant.name, newApkName);
+                    outputFileName = "商通天下-${variant.versionName}.apk"
                 }
-
             }
         }
     }
     productFlavors {
-        "offical" {}
-        "360" {}
         "default" {
-            minSdkVersion 17
+            dimension "release"
         }
-        yingyongbao {}
-        wandoujia {}
-        baidu {}
-        "91" {}
+
     }
     greendao{
         schemaVersion 1
@@ -120,7 +114,6 @@ android {
             java.srcDirs = ['src/main/java', 'src/main/java-gen']
         }
     }
-
 }
 
 dependencies {
@@ -186,5 +179,5 @@ dependencies {
     compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
     compile 'com.mylhyl:acp:1.1.7'
     compile 'com.getbase:floatingactionbutton:1.10.1'
-
+    compile 'com.gyf.barlibrary:barlibrary:2.3.0'
 }

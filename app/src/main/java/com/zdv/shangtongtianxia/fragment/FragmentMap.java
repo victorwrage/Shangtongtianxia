@@ -12,7 +12,6 @@ import android.support.v4.app.FragmentManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Gravity;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -70,6 +69,9 @@ import java.util.concurrent.TimeUnit;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
+/**
+ * 附近
+ */
 public class FragmentMap extends BaseFragment implements IView, OnGetPoiSearchResultListener {
 
     QueryPresent present;
@@ -445,21 +447,18 @@ public class FragmentMap extends BaseFragment implements IView, OnGetPoiSearchRe
             header_search_et.setText("请输入具体地址");
             initiateSearch.handleToolBar(getActivity(), linearLayout_search, listView, edit_text_search);
         });
-        edit_text_search.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_SEARCH) {
-                    if (edit_text_search.getText().toString().trim().length() > 0) {
-                        hidSoftInput();
-                        UpdateQuickSearch(edit_text_search.getText().toString());
-                        listView.setVisibility(View.GONE);
-                        searchInfo(edit_text_search.getText().toString());
+        edit_text_search.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                if (edit_text_search.getText().toString().trim().length() > 0) {
+                    hidSoftInput();
+                    UpdateQuickSearch(edit_text_search.getText().toString());
+                    listView.setVisibility(View.GONE);
+                    searchInfo(edit_text_search.getText().toString());
 
-                    }
-                    return true;
                 }
-                return false;
+                return true;
             }
+            return false;
         });
     }
 

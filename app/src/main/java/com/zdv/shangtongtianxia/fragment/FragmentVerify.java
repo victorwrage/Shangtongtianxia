@@ -51,7 +51,9 @@ import cn.bmob.v3.datatype.BmobFile;
 import cn.bmob.v3.listener.UploadFileListener;
 import okhttp3.ResponseBody;
 
-
+/**
+ * 认证
+ */
 public class FragmentVerify extends BaseFragment implements IMemberView {
     private static final String COOKIE_KEY = "cookie";
 

@@ -61,6 +61,7 @@
 -dontwarn cn.jiguang.**
 -keep class cn.jiguang.** { *; }
 
+ -keep class com.gyf.barlibrary.* {*;}
 #==================gson && protobuf==========================
 -keep class com.google.protobuf.** {*;}
 

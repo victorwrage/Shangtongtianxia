@@ -44,6 +44,9 @@ import butterknife.ButterKnife;
 import cn.bmob.v3.update.BmobUpdateAgent;
 import okhttp3.ResponseBody;
 
+/**
+ * 登录
+ */
 public class FragmentLogin extends BaseFragment implements IUserView {
 
     private final static int INIT_FINISHED = 1001;

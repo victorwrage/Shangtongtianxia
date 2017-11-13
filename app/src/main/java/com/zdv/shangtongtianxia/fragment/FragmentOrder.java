@@ -29,6 +29,9 @@ import java.util.concurrent.TimeUnit;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
+/**
+ * 我的订单
+ */
 public class FragmentOrder extends BaseFragment implements IView,OnTabSelectListener {
 
     QueryPresent present;

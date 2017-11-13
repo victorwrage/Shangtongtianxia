@@ -17,6 +17,7 @@ import com.jakewharton.rxbinding2.view.RxView;
 import com.mylhyl.acp.Acp;
 import com.mylhyl.acp.AcpListener;
 import com.mylhyl.acp.AcpOptions;
+import com.tencent.smtt.sdk.WebSettings;
 import com.tencent.smtt.sdk.WebView;
 import com.tencent.smtt.sdk.WebViewClient;
 import com.zdv.shangtongtianxia.R;
@@ -137,6 +138,7 @@ public class FragmentMain extends BaseFragment implements IView {
     @Override
     public void onResume() {
         super.onResume();
+
         Acp.getInstance(getContext()).request(new AcpOptions.Builder()
                         .setPermissions(Manifest.permission.INTERNET)
                 /*以下为自定义提示语、按钮文字
@@ -162,23 +164,17 @@ public class FragmentMain extends BaseFragment implements IView {
             isInit = true;
             main_stub.setVisibility(View.VISIBLE);
             tbsContent = (WebView) view.findViewById(R.id.tbsContent);
+            WebSettings webSettings = tbsContent.getSettings();
+            webSettings.setJavaScriptEnabled(true);
 
-          /*  String str = "http://wdt.qianhaiwei.com/Project/BeforeSea/Shop/app_dis.html?username=" + Constant.user_info.optString("tel") + "&password=" +
-                    util.getMD5(sp.getString("user_pw", "")) + "&key=" + Constant.WDT_KEY + "&company_id="
-                    + Constant.user_info.optString("company_id") + "&url=self";*/
             tbsContent.loadUrl("http://wdt.qianhaiwei.com/Project/BeforeSea/shoppingMall/index.html?key=L8NNvvqqqZr&company_id=5777#");
-           // tbsContent.loadUrl("http://wdt.qianhaiwei.com/Project/BeforeSea/Shop/index.html?shop=6848&company_id=10");
-       //  tbsContent.loadUrl("http://wdt.qianhaiwei.com/Project/BeforeSea/shoppingMall/index.html?key=L8NNvvqqqZr&company_id=5777#");
+
 
             tbsContent.setWebViewClient(new WebViewClient() {
                 @Override
                 public void onPageFinished(WebView webView, String s) {
                     super.onPageFinished(webView, s);
-             /*   if(str.equals("")) {
-                    str = "javascript:javacalljswith(" + util.UrlEnco(Constant.user_info.optString("tel")) + "," +util.UrlEnco( util.getMD5(sp.getString("user_pw", ""))) + "," +
-                            util.UrlEnco( Constant.user_info.optString("company_id")) + "," + util.UrlEnco(Constant.WDT_KEY) + ")";
 
-                    webView.loadUrl(str);*/
                     empty_lay.setVisibility(View.GONE);
                     tbsContent.setVisibility(View.VISIBLE);
                     //  }
@@ -186,11 +182,20 @@ public class FragmentMain extends BaseFragment implements IView {
 
                 @Override
                 public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                    view.loadUrl(url);
                     return true;
                 }
             });
         }
+        if(tbsContent != null){
+            tbsContent.onResume();
+        }
     }
 
+    @Override
+    public void onPause() {
+        tbsContent.onPause();
+        super.onPause();
+    }
 
 }

@@ -33,6 +33,9 @@ import butterknife.ButterKnife;
 import it.gmariotti.recyclerview.adapter.AlphaAnimatorAdapter;
 import okhttp3.ResponseBody;
 
+/**
+ *  消息
+ */
 public class FragmentMessage extends BaseFragment implements IMemberView,MessageItemAdapter.IMessageAdapter{
 
     QueryPresent present;
@@ -237,13 +240,17 @@ public class FragmentMessage extends BaseFragment implements IMemberView,Message
         if(data.get(position).getImg() !=null) {
             message_img_content.setVisibility(View.VISIBLE);
             Picasso.with(getContext()).load(data.get(position).getImg())
-                    .placeholder(R.drawable.verify_icon1)
+                    .placeholder(R.drawable.more)
                     .error(R.drawable.download_failed)
                     .into(message_img_content);
         }else{
             message_img_content.setVisibility(View.GONE);
         }
-        message_detail_content.setText(Html.fromHtml(data.get(position).getDetails())==null?"暂无内容":Html.fromHtml(data.get(position).getDetails()));
 
+        if(data.get(position).getDetails()==null||data.get(position).getDetails().equals("")){
+            message_detail_content.setText(Html.fromHtml("暂无内容"));
+        }else{
+            message_detail_content.setText(Html.fromHtml(data.get(position).getDetails()));
+        }
     }
 }

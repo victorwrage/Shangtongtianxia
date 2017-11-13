@@ -47,11 +47,10 @@ import cn.bingoogolapple.qrcode.zxing.QRCodeEncoder;
 import okhttp3.ResponseBody;
 
 /**
- * Info:
+ * Info:我的微店
  * Created by xiaoyl
  * 创建时间:2017/8/8 18:42
  */
-
 public class FragmentPay extends BaseFragment implements IPayView, IUserView {
     private final int QRCODE_FINISH = 111;
     ImageView header_btn, pay_qcode_iv;

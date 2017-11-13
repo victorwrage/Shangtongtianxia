@@ -29,6 +29,9 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import cn.bmob.v3.update.BmobUpdateAgent;
 
+/**
+ * 设置
+ */
 public class FragmentSetting extends BaseFragment {
     private static final String COOKIE_KEY = "cookie";
     @Bind(R.id.header_btn)

@@ -36,6 +36,9 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import okhttp3.ResponseBody;
 
+/**
+ * 《我的》页面
+ */
 public class FragmentUserManager extends BaseFragment implements IMemberView {
     private static final String COOKIE_KEY = "cookie";
     private static final String ALIAS_KEY = "alias";
@@ -207,6 +210,7 @@ public class FragmentUserManager extends BaseFragment implements IMemberView {
     }
 
     private void Shop() {
+
         if(Constant.user_info.optString("microshop_id").equals("0")){
             Constant.InDirectTo = 3;
             listener.gotoWebview();

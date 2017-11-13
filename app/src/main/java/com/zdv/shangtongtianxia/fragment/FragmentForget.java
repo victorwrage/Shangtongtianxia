@@ -39,6 +39,9 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.ResponseBody;
 
+/**
+ * 忘记密码
+ */
 public class FragmentForget extends BaseFragment implements IUserView {
 
 
@@ -339,6 +342,7 @@ public class FragmentForget extends BaseFragment implements IUserView {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+            foget_code_again.setEnabled(false);
             timer();
             header_title.setText("验证手机号码");
         }

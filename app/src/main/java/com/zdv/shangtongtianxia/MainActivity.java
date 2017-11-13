@@ -32,6 +32,7 @@ import com.baidu.ocr.sdk.OnResultListener;
 import com.baidu.ocr.sdk.exception.OCRError;
 import com.baidu.ocr.sdk.model.AccessToken;
 import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.gyf.barlibrary.ImmersionBar;
 import com.jakewharton.rxbinding2.view.RxView;
 import com.pos.api.Printer;
 import com.socks.library.KLog;
@@ -319,6 +320,7 @@ public class MainActivity extends BaseActivity implements IFragmentActivity, IMe
 
     @Override
     protected void onDestroy() {
+        ImmersionBar.with(this).destroy();
         super.onDestroy();
         unregisterReceiver(receiver_redirect);
         OCR.getInstance().release();
@@ -489,6 +491,9 @@ public class MainActivity extends BaseActivity implements IFragmentActivity, IMe
         }, 5000);
     }
 
+    /**
+     * 打印条目
+     */
     private void printContent() {
         String pay_tp = "";
         type = "00";
@@ -579,6 +584,7 @@ public class MainActivity extends BaseActivity implements IFragmentActivity, IMe
 
 
     private void initView() {
+
         main_header_lay.setVisibility(View.GONE);
         main_bottom_lay.setVisibility(View.GONE);
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
@@ -1330,6 +1336,7 @@ public class MainActivity extends BaseActivity implements IFragmentActivity, IMe
                 KLog.v("MSG_SET_ALIAS");
                 mHandler.sendMessage(mHandler.obtainMessage(MSG_SET_ALIAS, Constant.user_info.opt(Constant.CODE)));//设置推送别名
             }
+            ImmersionBar.with(this).barColor(R.color.shangtongtianx_txt).init();
             fetchMessage();
         }
         gotoPage(2);

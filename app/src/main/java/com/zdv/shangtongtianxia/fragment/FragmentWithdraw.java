@@ -44,6 +44,9 @@ import butterknife.ButterKnife;
 import it.gmariotti.recyclerview.adapter.AlphaAnimatorAdapter;
 import okhttp3.ResponseBody;
 
+/**
+ * 提现
+ */
 public class FragmentWithdraw extends BaseFragment implements IPayView {
 
     QueryPresent present;

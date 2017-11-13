@@ -51,7 +51,9 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.ResponseBody;
 
-
+/**
+ * 角色申请
+ */
 public class FragmentActor extends BaseFragment implements IMemberView, IUserView,IPayView {
     private final int QRCODE_FINISH = 111;
     @Bind(R.id.header_btn)
@@ -415,8 +417,11 @@ public class FragmentActor extends BaseFragment implements IMemberView, IUserVie
     @Override
     public void ResolveCodeInfo(ResponseBody info) {
         hideWaitDialog();
-        actor_code_lay.setEnabled(false);
+        actor_code_lay.setEnabled(true);
+        actor_code_tv.setText("获取验证码");
+
         if (info.source() == null) {
+
             VToast.toast(getContext(), "网络错误，请重试!");
             return;
         }
@@ -436,6 +441,7 @@ public class FragmentActor extends BaseFragment implements IMemberView, IUserVie
         VToast.toast(getContext(), jsonObject.optString(Constant.ERRMSG));
         if (jsonObject.optString(Constant.ERRCODE).equals(SUCCESS)) {
             actor_code_et.setEnabled(true);
+            actor_code_lay.setEnabled(false);
 
             VToast.toast(getContext(), "验证码已发送至您的手机");
             try {

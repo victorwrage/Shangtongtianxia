@@ -24,6 +24,9 @@ import java.util.concurrent.TimeUnit;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
+/**
+ * 财富
+ */
 public class FragmentWealth extends BaseFragment implements IView {
 
     QueryPresent present;

@@ -51,6 +51,9 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import it.gmariotti.recyclerview.adapter.AlphaAnimatorAdapter;
 
+/**
+ * 商城分润
+ */
 public class FragmentMallProfit extends BaseFragment implements IView {
 
     QueryPresent present;

@@ -32,6 +32,9 @@ import java.util.concurrent.TimeUnit;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
+/**
+ * 我的团队
+ */
 public class FragmentTeam extends BaseFragment  implements IView ,OnTabSelectListener{
 
     QueryPresent present;
